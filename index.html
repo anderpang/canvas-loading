@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>canvas loading</title>
+<style>
+    body{margin:0;padding:0;}
+</style>
+</head>
+<body>
+    <script src="https://cdn.bootcss.com/pixi.js/4.8.0/pixi.min.js"></script>
+    <script src="js/LoadingSprite.js"></script>
+    <script>
+        var loading=new LoadingSprite();
+        var ticker=new PIXI.ticker.Ticker();
+        var progress=0;
+
+        document.body.appendChild(loading.view);
+
+        ticker.add(function(){             
+             progress+=0.2;
+             if(progress>100){
+                 progress=0;
+                 //progress=100;
+                 //this.destroy();
+             }
+             loading.text=progress.toFixed(0)+"%";
+             loading.update().draw();
+        });
+
+        ticker.start();
+
+    </script>
+</body>
+</html>
