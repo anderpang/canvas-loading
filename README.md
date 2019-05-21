@@ -1,7 +1,7 @@
 # canvas-loading
 canvas loading animation
 
-<a href="http://htmlpreview.github.io/?http://github.com/anderpang/canvas-loading/blob/master/index.html">演示地址</a>
+<a href="http://htmlpreview.github.io/?https://github.com/anderpang/canvas-loading/blob/master/index.html">演示地址</a>
 
 
 ## 所有选项皆为可选
